@@ -17,6 +17,8 @@ function Home(){
             <p></p>
             
             <Link to='/Contato'> Ir para Contato </Link>
+            <p></p>
+            <Link to='/Tarefas'> Ir para Tarefas </Link>
             
         </div>
         <body className={styles.body}>
