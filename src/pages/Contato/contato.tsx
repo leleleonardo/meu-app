@@ -1,12 +1,19 @@
 //import App from './App'
 import CustomInput from './Input/index'
 import ButtonFatec from './button/index'
+import { Link } from "react-router-dom"
 
 
 function Contato() {
 
   return (
     <>
+    <div>
+            
+            <Link to='/'> Voltar para Home</Link>
+    </div>
+            
+    <body>
       <div className="container">
       <h1>Entre em contato</h1>
       <div className='separator'></div>
@@ -24,10 +31,11 @@ function Contato() {
         <ButtonFatec type="submit" label="Enviar mensagem" />
       </form>
     </div>
+    </body>
+  
     </>
   );
 }
 
-//const App = () => {}
 
 export default Contato

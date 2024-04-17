@@ -14,15 +14,9 @@ function Home(){
             }}>Home</h1>
             <Link to='/sobre'>Ir para Sobre</Link>
 
-
-            <h2 onClick={() => {
-                navigate('/Contato')
-            }}>Home</h2>
-            <Link to='/Contato'> Contato </Link>
-
-
-
-
+            <p></p>
+            
+            <Link to='/Contato'> Ir para Contato </Link>
             
         </div>
         <body className={styles.body}>
