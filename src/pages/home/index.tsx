@@ -17,11 +17,14 @@ function Home(){
             <p></p>
             
             <Link to='/Contato'> Ir para Contato </Link>
+
             <p></p>
+
             <Link to='/Tarefas'> Ir para Tarefas </Link>
             
         </div>
-        <body className={styles.body}>
+
+        <body className={styles.container}>
         <p>{jsonData.welcomeMessage}<p/>
         <p> {jsonData.description} </p>
 

@@ -11,7 +11,15 @@ function Sobre(){
             <p>{jsonData.welcomeMessage}</p>
         <p>{jsonData.description}</p>
         </div>
+        <body>
+            
         
+        <div className={styles.container}>
+            <h2>Teste</h2>
+           <p>{jsonData.welcomeMessage}</p>
+        <p>{jsonData.description}</p>
+        </div>
+        </body>
         </>
     )
 }
