@@ -66,3 +66,37 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Estilo do cabeçalho */
+header {
+  background-color: #333; /* Cor de fundo da barra de navegação */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+    width: 100%; /* Garante que ocupe toda a largura da página */
+    top: 0; /* Fixa no topo da página */
+    z-index: 1000;
+}
+
+/* Removendo estilos de lista padrão e fazendo o menu horizontal */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Estilo para hover nos links */
+nav ul li a:hover {
+  color: #ccc;
+}

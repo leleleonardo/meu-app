@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom"
 import jsonData from './data.json'
+import styles from './sobre.module.css'
 
 function Sobre(){
     return (
         <>
-        <div>
+        <div className={styles.body}>
             <h1>Sobre</h1>
             <Link to='/'>Voltar para Home</Link>
-        </div>
-        <p>{jsonData.welcomeMessage}</p>
+            <p>{jsonData.welcomeMessage}</p>
         <p>{jsonData.description}</p>
+        </div>
+        
         </>
     )
 }
