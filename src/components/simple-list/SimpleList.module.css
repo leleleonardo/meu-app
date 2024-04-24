@@ -1,0 +1,14 @@
+.separator {
+    width: 100%; 
+    border-bottom: 1px solid #ffffff; 
+    margin: 20px 0; 
+  }
+    
+  .rect {
+    text-align: left;
+    width: 250px; 
+  }
+  
+  #ul {
+    list-style-type: disc;
+  }

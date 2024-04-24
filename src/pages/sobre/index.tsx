@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+/*import { Link } from "react-router-dom"
 import jsonData from './data.json'
 import styles from './sobre.module.css'
 
@@ -21,6 +21,27 @@ function Sobre(){
         </div>
         </body>
         </>
+    )
+}
+
+export default Sobre/**/
+
+import { Link } from "react-router-dom"
+import Layout from "../../components/layout"
+
+
+function Sobre(){
+    return (
+        <Layout>
+        <h1>Sobre</h1>
+                <p></p>
+                <Link to='/'>Voltar para Home</Link>
+                <p></p>
+                <Link to='/Contato'>Ir para Contato</Link>
+                <p></p>
+                <Link to='/tarefas'>Ir para Tarefas</Link>
+        </Layout>
+        
     )
 }
 

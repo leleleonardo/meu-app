@@ -3,14 +3,19 @@
 import styles from './CustomInput.module.css'; // Importando estilos do arquivo module.css
 
 interface Props {
-  initialValue: string;
+  defaultValue: string;
   type: string;
-  placeholder: string;
+  placeholderText: string;
 }
 
-function CustomInput({ initialValue, type, placeholder }: Props) {
+function CustomInput({ defaultValue, type, placeholderText }: Props) {
   return (
-    <input className={styles.CustomInput} type={type} value={initialValue} placeholder={placeholder} />
+    <input 
+    className={styles.CustomInput} 
+    type={type} 
+    value={defaultValue} 
+    placeholder={placeholderText} 
+    />
   );
 }
 
