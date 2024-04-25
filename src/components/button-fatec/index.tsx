@@ -8,7 +8,7 @@ interface Props{
 
 function ButtonFatec ({type, label}: Props){
 return (
-    <Button colorScheme='red' size='lg'variant='outline' type={type}>
+    <Button colorScheme='blue' size='small'variant='outline' type={type}>
         {label}
         </Button>
 )

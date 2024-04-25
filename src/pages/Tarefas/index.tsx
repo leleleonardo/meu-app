@@ -1,49 +1,40 @@
 import { Link } from "react-router-dom"
 import Layout from "../../components/layout"
-import SimpleList from "../../components/simple-list"
-import styles from "./tarefas.module.css"
+//import styles from "./tarefas.module.css"
+import Task from "../../components/tarefa/index"
+import { Input } from '@chakra-ui/react'
+import ButtonFatec from "../../components/button-fatec"
 
 function Tarefas() {
 
     return (
         <Layout>
-        <div className={styles.container}>
-            <SimpleList
-            title=' Lista de tarefas'
-            item1='Tarefa 1'
-            item2='Tarefa 2'
-            item3='Tarefa 3'
-            />
+
+
+            <h1>Lista de Tarefas</h1>
+            <p></p>
+            <h1>Inserir nova tarefa</h1>
+            <Input placeholder='Digite o título da tarefa' width='auto' />
+            <Task></Task>
+            <ButtonFatec label='Inserir' type="button" />
+            <p></p>
+            <label>Tarefa 1</label>
+            <ButtonFatec label='Pendente' type="button" />
+            <ButtonFatec label='Excluir' type="button" />
+            <p></p>
+            <label>Tarefa 2</label>
+            <ButtonFatec label='Pendente' type="button" />
+            <ButtonFatec label='Excluir' type="button" />
+            <p></p>
+            <label>Tarefa 3</label>
+            <ButtonFatec label='Pendente' type="button" />
+            <ButtonFatec label='Excluir' type="button" />
+            <p></p>
             <Link to='/'> Voltar para home</Link>
-        </div>
+
         </Layout>
     )
 
-
-
-   /* return (
-        <Layout>
-            <div>
-                <h1> Lista de Tarefas</h1>
-
-                <ul>
-                    <li> Tarefa 1</li>
-                    <li> Tarefa 2</li>
-                    <li> Tarefa 3</li>
-                    <li> Tarefa 4</li>
-                </ul>
-
-                <p></p>
-                <Link to='/'> Voltar para Home </Link>
-                <p></p>
-                <Link to='/Contato'>Ir para Contato</Link>
-                <p></p>
-                <Link to='/tarefas'>Ir para Tarefas</Link>
-                <p></p>
-
-            </div>
-        </Layout>
-    )*/
 }
 
 export default Tarefas
