@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+/*import { Link } from "react-router-dom"
 import Layout from "../../components/layout"
 //import styles from "./tarefas.module.css"
 import Task from "../../components/tarefa/index"
@@ -37,5 +37,26 @@ function Tarefas() {
 
 }
 
-export default Tarefas
+export default Tarefas*/
 
+import Layout from "../../components/layout"
+import Task from "../../components/tarefa"
+
+
+
+
+
+function Tarefas(){
+    return (
+        <Layout>
+                    <div>
+                        <h1>LISTA DE TAREFAS</h1>
+                        <Task name={'Inserir nova tarefa'}></Task>
+                        
+                        
+                    </div>
+        </Layout>
+    )
+}
+
+export default Tarefas
