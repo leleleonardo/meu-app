@@ -37,7 +37,7 @@ function Tarefas() {
 
 }
 
-export default Tarefas*/
+export default Tarefas
 
 import Layout from "../../components/layout"
 import Task from "../../components/tarefa"
@@ -55,6 +55,62 @@ function Tarefas(){
                         
                         
                     </div>
+        </Layout>
+    )
+}
+
+export default Tarefas*/
+
+import { Link } from "react-router-dom"
+import Layout from "../../components/layout"
+import ItemTarefa from "./item-tarefa"
+import { useEffect, useState } from "react"
+import FormTarefa from "../../components/tarefa/form-tarefa"
+import { Tarefa } from "../../interfaces/tarefas"
+
+
+
+
+
+function Tarefas() {
+
+    const [tarefas, setTarefas] = useState<Tarefa[]>([])
+
+    function carregarLista() {
+        return [
+            { id: 1, nome: "Tarefa 1", concluida: false },
+            { id: 2, nome: "Tarefa 2", concluida: false }
+        ]
+    }
+
+    useEffect(() => {
+        alert('Render')
+        const tarefas = carregarLista()
+        setTarefas(tarefas)
+    }, [])
+
+    function apagarTarefa(id: number) {
+        const tarefasAtualizadas = tarefas.filter((tarefa) => tarefa.id !== id)
+        setTarefas(tarefasAtualizadas)
+    }
+
+    return (
+        <Layout>
+            <h1>Tarefas</h1>
+            <Link to='/'>Voltar para Home</Link>
+            <hr />
+            <FormTarefa
+                tarefas={tarefas}
+                setTarefas={setTarefas} />
+            {
+                tarefas.map((tarefa) => (
+                    <ItemTarefa
+                        key={tarefa.id}
+                        apagarTarefa={apagarTarefa}
+                        titulo={tarefa.nome}
+                        idTarefa={tarefa.id} />
+                ))
+            }
         </Layout>
     )
 }
